@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29285A291C52E4D100D5AA77 /* WorkoutSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29285A281C52E4D100D5AA77 /* WorkoutSetupView.swift */; };
 		293964071C52BE0B0075100C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293964061C52BE0B0075100C /* AppDelegate.swift */; };
 		293964091C52BE0B0075100C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293964081C52BE0B0075100C /* ViewController.swift */; };
 		2939640C1C52BE0B0075100C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2939640A1C52BE0B0075100C /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29285A281C52E4D100D5AA77 /* WorkoutSetupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutSetupView.swift; sourceTree = "<group>"; };
 		293964031C52BE0B0075100C /* Push Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Push Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		293964061C52BE0B0075100C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		293964081C52BE0B0075100C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				293964061C52BE0B0075100C /* AppDelegate.swift */,
 				293964081C52BE0B0075100C /* ViewController.swift */,
+				29285A281C52E4D100D5AA77 /* WorkoutSetupView.swift */,
 				2939640A1C52BE0B0075100C /* Main.storyboard */,
 				2939640D1C52BE0B0075100C /* Assets.xcassets */,
 				2939640F1C52BE0B0075100C /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29285A291C52E4D100D5AA77 /* WorkoutSetupView.swift in Sources */,
 				293964091C52BE0B0075100C /* ViewController.swift in Sources */,
 				293964071C52BE0B0075100C /* AppDelegate.swift in Sources */,
 			);
@@ -284,6 +288,7 @@
 				293964171C52BE0B0075100C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

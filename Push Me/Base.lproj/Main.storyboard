@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10089" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10072.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Push_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,158 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Workouts" translatesAutoresizingMaskIntoConstraints="NO" id="3vt-Dd-zbx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-8" translatesAutoresizingMaskIntoConstraints="NO" id="9pa-GS-WfS">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJO-CN-QcC" userLabel="Pushup">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="126.5"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onWorkoutSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7uC-Yn-WyZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2u-22-I87" userLabel="Situp">
+                                        <rect key="frame" x="0.0" y="118.5" width="600" height="126.5"/>
+                                        <connections>
+                                            <action selector="onWorkoutSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OWe-Ww-AMo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKn-FR-8j1" userLabel="Squat">
+                                        <rect key="frame" x="0.0" y="237" width="600" height="126"/>
+                                        <connections>
+                                            <action selector="onWorkoutSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JlH-OL-sK4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkS-8T-NG6" userLabel="Climbers">
+                                        <rect key="frame" x="0.0" y="355" width="600" height="126.5"/>
+                                        <connections>
+                                            <action selector="onWorkoutSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Rx-Io-ECv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9f-ku-w8C" userLabel="Lunges">
+                                        <rect key="frame" x="0.0" y="473.5" width="600" height="126.5"/>
+                                        <connections>
+                                            <action selector="onWorkoutSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2YD-lt-YnI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3vt-Dd-zbx" secondAttribute="trailing" id="GVn-X7-nSu"/>
+                            <constraint firstItem="3vt-Dd-zbx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="Icm-77-4db"/>
+                            <constraint firstItem="9pa-GS-WfS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nla-wV-Qnd"/>
+                            <constraint firstItem="9pa-GS-WfS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="Teq-kr-zNS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3vt-Dd-zbx" secondAttribute="bottom" id="nN1-7A-7zO"/>
+                            <constraint firstAttribute="trailing" secondItem="9pa-GS-WfS" secondAttribute="trailing" id="v8g-Bp-37c"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9pa-GS-WfS" secondAttribute="bottom" id="yJk-x7-Pr2"/>
+                            <constraint firstItem="3vt-Dd-zbx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z3n-zN-l6R"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="E97-Nu-Xv7" kind="presentation" identifier="onWorkoutSelection" id="cM4-ph-9MF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Workout Setup View-->
+        <scene sceneID="DAg-iA-MZH">
+            <objects>
+                <viewController id="E97-Nu-Xv7" customClass="WorkoutSetupView" customModule="Push_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q2I-0U-OZx"/>
+                        <viewControllerLayoutGuide type="bottom" id="JEo-MV-a4m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ahi-Ov-s0e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReminderSet" translatesAutoresizingMaskIntoConstraints="NO" id="vLF-p1-Yx6">
+                                <rect key="frame" x="225" y="225" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="TcS-Dm-0DO"/>
+                                    <constraint firstAttribute="height" constant="150" id="nvN-8v-fFW"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QcI-Iy-QTg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xb-27-MXO">
+                                <rect key="frame" x="20" y="20" width="32" height="32"/>
+                                <state key="normal" image="Cancel"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="E97-Nu-Xv7" eventType="touchUpInside" id="itB-Bt-qBB"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QU0-I7-VYv">
+                                <rect key="frame" x="0.0" y="170" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="475204560.81312901">
+                                    <!--2016-01-23 01:16:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="en_US"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZA-k7-yoc">
+                                <rect key="frame" x="0.0" y="500" width="600" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Wby-V5-he4"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="oneSetReminder:" destination="E97-Nu-Xv7" eventType="touchUpInside" id="VtY-of-uR9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set my daily reminder at:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFg-ht-S6F">
+                                <rect key="frame" x="0.0" y="110" width="600" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3xb-27-MXO" firstAttribute="leading" secondItem="Ahi-Ov-s0e" secondAttribute="leadingMargin" id="42L-mR-0TN"/>
+                            <constraint firstItem="QU0-I7-VYv" firstAttribute="leading" secondItem="oFg-ht-S6F" secondAttribute="leading" id="56D-QB-2B5"/>
+                            <constraint firstItem="kZA-k7-yoc" firstAttribute="leading" secondItem="Ahi-Ov-s0e" secondAttribute="leading" id="8m9-zf-I72"/>
+                            <constraint firstAttribute="trailing" secondItem="kZA-k7-yoc" secondAttribute="trailing" id="Iid-8G-zoi"/>
+                            <constraint firstItem="JEo-MV-a4m" firstAttribute="top" secondItem="QcI-Iy-QTg" secondAttribute="bottom" id="Ikc-E1-7Bi"/>
+                            <constraint firstItem="3xb-27-MXO" firstAttribute="top" secondItem="Ahi-Ov-s0e" secondAttribute="topMargin" constant="20" id="Lj7-8f-6c9"/>
+                            <constraint firstItem="JEo-MV-a4m" firstAttribute="top" secondItem="kZA-k7-yoc" secondAttribute="bottom" id="QaB-is-vI3"/>
+                            <constraint firstItem="QU0-I7-VYv" firstAttribute="top" secondItem="oFg-ht-S6F" secondAttribute="bottom" constant="36" id="Sj9-qt-vwF"/>
+                            <constraint firstItem="QcI-Iy-QTg" firstAttribute="top" secondItem="Q2I-0U-OZx" secondAttribute="bottom" constant="-20" id="SxL-rF-Ig2"/>
+                            <constraint firstAttribute="trailing" secondItem="QcI-Iy-QTg" secondAttribute="trailing" id="TwN-2C-gWA"/>
+                            <constraint firstItem="QU0-I7-VYv" firstAttribute="trailing" secondItem="oFg-ht-S6F" secondAttribute="trailing" id="V8W-nG-wgd"/>
+                            <constraint firstItem="vLF-p1-Yx6" firstAttribute="centerX" secondItem="Ahi-Ov-s0e" secondAttribute="centerX" id="Wg4-eX-IDc"/>
+                            <constraint firstAttribute="trailing" secondItem="QU0-I7-VYv" secondAttribute="trailing" id="jij-nO-PhF"/>
+                            <constraint firstItem="QcI-Iy-QTg" firstAttribute="leading" secondItem="Ahi-Ov-s0e" secondAttribute="leading" id="qyZ-dv-r3I"/>
+                            <constraint firstItem="QU0-I7-VYv" firstAttribute="leading" secondItem="Ahi-Ov-s0e" secondAttribute="leading" id="rB1-r3-IwC"/>
+                            <constraint firstItem="vLF-p1-Yx6" firstAttribute="centerY" secondItem="Ahi-Ov-s0e" secondAttribute="centerY" id="sh9-pK-U51"/>
+                            <constraint firstItem="QU0-I7-VYv" firstAttribute="top" secondItem="Ahi-Ov-s0e" secondAttribute="top" constant="170" id="xi2-s0-bUN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="QcI-Iy-QTg" id="Zgw-FH-cfy"/>
+                        <outlet property="confirmationImage" destination="vLF-p1-Yx6" id="Zaz-Gy-Obj"/>
+                        <outlet property="reminderButton" destination="kZA-k7-yoc" id="3Ip-uW-gGN"/>
+                        <outlet property="timePicker" destination="QU0-I7-VYv" id="an3-MP-uPw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPK-f9-eIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="539"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Cancel" width="32" height="32"/>
+        <image name="ReminderSet" width="450" height="450"/>
+        <image name="Workouts" width="375" height="667"/>
+    </resources>
 </document>
